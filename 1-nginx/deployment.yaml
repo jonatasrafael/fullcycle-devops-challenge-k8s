@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: challenge-nginx
-  labels:
-    app: challenge-nginx
 spec:
   replicas: 3
   selector:
