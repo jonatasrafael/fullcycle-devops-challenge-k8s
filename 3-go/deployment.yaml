@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: challenge-go-k8s
+spec:
+  replicas: 3
+  selector:
+      matchLabels:
+        app: challenge-go-k8s
+  template:
+    metadata:
+      labels:
+        app: challenge-go-k8s
+    spec:
+      containers:
+      - name: c-challenge-go-k8s
+        image: jonatasrafael/codeeducation-go-k8s
+        ports:
+        - containerPort: 8000
